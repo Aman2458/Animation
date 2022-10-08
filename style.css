@@ -1,0 +1,219 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+html{
+    perspective: 100px;
+}
+#main{
+    height: 100%;
+    width: 100%;
+    background-color: #eee;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: none;
+
+ 
+}
+#nav{
+    height: 60px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    justify-content: space-between;
+    top: 0;
+    width: 100%;
+}
+#nav h4{
+    font-size: 14px;
+    font-family: Gilroy;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+#nav i{
+    font-size: 17px;
+    font-weight: 600;
+}
+
+h3{
+    font-size: 19px ;
+    text-transform: uppercase;
+    z-index: 99;
+    letter-spacing: 0.5;
+    top: 21%;
+    width: 49%;
+   position: absolute;
+   text-align: center;
+   color: #fff;
+   font-family: gilroy;
+   mix-blend-mode: difference;
+}
+
+img{
+    height: 370px;
+    width: 330px;
+    object-fit: cover;
+    transition: transform 0.4s;
+    object-position: 0% 75%;
+    perspective: -1000;
+    transform-style: preserve-3d;
+}
+#text1{
+    position: absolute;
+    top: 29%;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#text1::-webkit-scrollbar{
+    display: none;
+}
+#text1>h1{
+    display: inline-block;
+    font-family: glitten;
+    font-size: 100px;
+    text-transform: uppercase;
+    margin-right: 30px;
+    animation-name: scroll;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+#text2{
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y:hidden ;
+    z-index: 99;
+}
+
+#text2::-webkit-scrollbar{
+    display: none;
+}
+
+#text2>h1{
+    display: inline-block;
+    font-size: 100px;
+    text-transform: uppercase;
+    font-family: glitten;
+    margin-right: 30px;
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000;
+    animation-name: scroll;
+    animation-duration: 1.5s;
+    animation-direction: reverse;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#text3{
+    position: absolute;
+    top: 60%;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+#text3::-webkit-scrollbar{
+    display: none;
+}
+
+#text3>h1{
+    display: inline-block;
+    font-size: 100px;
+    text-transform: uppercase;
+    font-family: Glitten;
+    margin-right: 30px;
+    animation-name: scroll;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#cursor{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: darkred;
+    
+}
+@keyframes scroll{
+    0%{
+        transform: translateX(0);
+    }
+100%{
+    transform: translateX(calc(-100% - 35px));
+}
+
+}
+
+
+@media (max-width: 500px){
+
+
+
+   #nav h4 {
+    padding-right: 10%px ;
+   }
+
+   #nav i{
+    padding-left: 20%;
+   }
+
+      
+    h3{
+        margin-top: 90px;
+        font-size: 10px;
+        width: 80%;
+        font-weight: 400;
+    }
+
+    #text1 h1{
+       margin-top: 40px;
+        font-size: 70px;
+    }
+
+    #text2 h1{
+       margin-top: 20px;
+
+        font-size: 70px;
+
+    }
+    #text3 h1{
+        font-size: 70px;
+
+    }
+
+
+    img{
+        margin-top: 13%;
+        height: 35%;
+        width: 50%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
